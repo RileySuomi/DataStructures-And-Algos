@@ -14,7 +14,7 @@ class Solution:
     def isPalindrome(self, x: int) -> bool:
         y = str(x)
 
-        n = y[::-1]
+        n = y[::-1] # way to reverse string in py
 
         if y == n:
             return True

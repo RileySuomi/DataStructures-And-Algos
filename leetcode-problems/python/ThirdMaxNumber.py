@@ -17,13 +17,15 @@ class Solution:
         count_dict = {}
         res = list()
 
+        # filling the dictionaries with key being amount of occurence
         for x in nums:
             if x in count_dict:
                 count_dict[x] += 1
             else:
                 count_dict[x] = 1
         
-
+        # if there are less than 3 values in dictionary then return max
+        # else return 3rd max
         if len(count_dict) < 3:
             distinct_max = max(count_dict)
             return distinct_max
