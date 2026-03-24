@@ -7,7 +7,7 @@
 
 namespace algorithm {
 
-    template <typename T>
+    template <typename T> // using template allows for generic programming, so we can use this tree for any data type. 
 
     struct Node {
         T data;
@@ -23,6 +23,9 @@ namespace algorithm {
     A binary search tree (BST) is a data structure where each node has at most two children,
     and for each node, all elements in its left subtree are less than the node,
     and all elements in its right subtree are greater than the node.
+
+    Could make a more basic binary tree that doesnt have the ordering property but this is more common and useful.
+    And good practive for understanding trees in general.
     */
 
     class Tree {
@@ -103,6 +106,7 @@ namespace algorithm {
                     isLeftChild = false;
                 }
             }
+
             if (current == nullptr) return; // not found
             // Case 1: No children
             if (current->left == nullptr && current->right == nullptr) {
@@ -116,6 +120,7 @@ namespace algorithm {
                 delete current;
                 count--;
             }
+
             // Case 2: One child
             else if (current->left == nullptr) {
                 if (current == root) {
@@ -138,6 +143,7 @@ namespace algorithm {
                 delete current;
                 count--;
             }
+
             // Case 3: Two children
             else {
                 // Find inorder successor (min in right subtree)
