@@ -2,6 +2,15 @@
 // problem didnt have a name and I dont have description of the problem, so I just named it IBMdatascience1. ( for a data science position)
 // ( ctrl + c , my solution so i could save it and put it here. )
 
+
+// gave me function signature and I had to implement the function. I had to read the problem description and understand what is being asked, then come up with a solution and implement it in C++.
+
+// honestly a challenging problem. a lot to thing about with tricky wording. but once you get edge cases out of the way, its a pretty straightforward greedy problem.
+
+#include <vector>
+#include <algorithm>   
+using namespace std;
+
 long minCostRequired(vector<int> computationCap, vector<int> cost, int avgCap, int maxCap) {
    int n = computationCap.size();
    // Edge case: No servers
