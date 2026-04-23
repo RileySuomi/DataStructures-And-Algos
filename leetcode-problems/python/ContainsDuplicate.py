@@ -13,12 +13,12 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        count_dic = {}
+        count_dict = {}
 
         for element in nums:
-            if element in count_dic:
+            if element in count_dict:
                 return True
             else:
-                count_dic[element] = 1
+                count_dict[element] = 1
         
         return False
