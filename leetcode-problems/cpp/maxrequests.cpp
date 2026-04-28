@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 int maximumRequests(int window, vector<int> timestamps) {
 
 
