@@ -12,8 +12,8 @@ long getIdealNumbers(long low, long high) {
 
    long result = 0;
 
-   for (long x = 1; x <= high; x *= 3) {
-       for (long y = x; y <= high; y *= 5) {
+   for (long x = 1; x <= high; x *= 3) { // multiples of 3
+       for (long y = x; y <= high; y *= 5) { // multiples of 5
            if (y >= low) {
             result++;
            }
