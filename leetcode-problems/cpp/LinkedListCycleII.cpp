@@ -19,6 +19,7 @@ Do not modify the linked list.
  * };
  */
 
+// what to return was tricky at first
 
 #include <unordered_set>
 
@@ -30,13 +31,13 @@ Do not modify the linked list.
 
 class Solution {
 public:
-    ListNode *detectCycle(ListNode *head) {
+    ListNode *detectCycle(ListNode *head) { // notice the type of the return value is a pointer to a ListNode
         
         if (head == nullptr){
             return nullptr;
         }
 
-        std::unordered_set<ListNode*> mySet;
+        std::unordered_set<ListNode*> mySet; // set to store visited nodes
 
         mySet.insert(head);
 
